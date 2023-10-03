@@ -1,0 +1,10 @@
+.containerMenu{
+    position: fixed;
+    background-color: rgba(131, 131, 131, 0.646);
+}
+.contentOptionMenu{
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    color: #000;
+}
