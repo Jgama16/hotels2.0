@@ -1,11 +1,13 @@
-"use client"
-import { useEffect, useState } from "react"
+'use client'
+
+import { useContext, useEffect, useState } from "react"
 // import { hotelData } from "../../../services/getHotelsServices"
 import { CardHotel } from "../../molecules/card/card"
 import { Header } from "../../molecules/header/header"
 import styles from './cardsFilter.module.css'
-import { hotelRooms } from "@/app/utils/helper"
+import { hotelRooms } from "@/utils/helper"
 import { Alert, AlertTitle, Snackbar } from "@mui/material"
+import { AppContext } from "@/app/store/CurrentProvider"
 
 export const CardsFilter = ({getDataHotels}) => {
     const [selectedCountry, setSelectedCountry] = useState ("all");
@@ -15,8 +17,14 @@ export const CardsFilter = ({getDataHotels}) => {
     const [dateTo, setDateTo] = useState("all")
     const [filterHotels, setFilterHotels] = useState([]);
     const [setshowSnackbar, setShowSnackbar] = useState(false);
+    const {setHomePage} = useContext(AppContext);
+
+    useEffect(()=>{
+        setHomePage();
+    }, []);
     // const [hotelsData, setHotelsData] = useState([]);
     
+
     // const fetchHotels = async() => {
     //     try {
     //         const data = await hotelData();
@@ -120,7 +128,8 @@ export const CardsFilter = ({getDataHotels}) => {
             ) : (
                 <Alert severity="info">
                 <AlertTitle>Info</AlertTitle>
-                No se a Encontrado el Resultado para Su Busqueda— <strong>Pr favor utilice otros filtros gracias!</strong>
+                No se a Encontrado el Resultado para Su Busqueda— 
+                <strong>Pr favor utilice otros filtros gracias!</strong>
                 </Alert>
             )}
             <Snackbar

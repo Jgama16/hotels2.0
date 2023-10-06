@@ -64,8 +64,9 @@ export const Header = ({
                 <option value="medium">Medium</option>
                 <option value="large">Large</option>
             </select>
-
+            <button className={styles.filtersBox__btn}>Clear</button>
             
+            {/* <h2 className={styles.header__subtitle}>We have hound for  you ...</h2> */}
         </div>
         </header>
     </>

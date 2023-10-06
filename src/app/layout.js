@@ -1,6 +1,8 @@
 import { Menu } from '../../componets/molecules/menu/menu'
 import './globals.css'
-import { Dancing_Script } from 'next/font/google'
+import { Dancing_Script, Inter } from 'next/font/google'
+import { CurrentPageProvider } from './store/CurrentProvider'
+import ProviderReservation from './store/ProvadierReservation'
 
 const fonts = Dancing_Script({ subsets: ['latin'] })
 
@@ -12,9 +14,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={fonts.className}>
-        <Menu/>
-        {children}</body>
+      <ProviderReservation>
+        <CurrentPageProvider>
+          <body className={fonts.className}>
+           <Menu/>
+             {children}
+            </body>
+        </CurrentPageProvider>
+        </ProviderReservation>
     </html>
   )
 }
+
