@@ -1,31 +1,45 @@
 
 .container {
-    background: white;
-    box-shadow: rgba(16, 15, 15, 0.1) 8px 0.25rem 0.5rem;
+    background: rgb(5, 31, 70);
+    box-shadow: rgba(255, 255, 255, 0.74) 8px 0.25rem 0.5rem;
     padding: 20px;
-    margin: 40px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 85vh;
+    height: 95vh;
+    color: #e8e8e8;
+    text-align: center;
 }
 
+
+.text {
+    background: rgb(4, 68, 164);
+    box-shadow: rgba(255, 255, 255, 0.74) 8px 0.25rem 0.5rem;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    justify-content: space-around;
+    color: #e8e8e8;
+    text-align: center;
+}
 .detailImage{
     border-radius: 10px;
-    border: 2px solid red;
+    border: 2px solid rgb(18, 66, 211);
 }
 
 .buttonCardHotel {
     font-size: 12px;
     font-weight: bold;
-    color: #ffffff;
-    background-color: #e26811;
+    color: #000000;
+    background-color: #e8e8e8;
     width: 120px;
-
+    margin: 10px;
 }
-
+.description{
+    align-content: center;
+}
 .buttonContainer {
     display: flex;
     gap: 10px;
@@ -35,9 +49,9 @@
 .buttonSecondary {
     font-size: 12px;
     font-weight: bold;
-    color: #e26811;
+    color: #090909;
     background-color: white;
-    border: #e26811 solid 1px;
+    border: #0f0663 solid 1px;
     width: 120px;
 
 }
@@ -46,3 +60,4 @@
     color: #e26811;
     border: 1px solid #e26811;
 }
+

@@ -11,10 +11,12 @@ const Detail = () => {
       description: "", 
       photo: "", 
       country:"",
-    })
+      city:"",
+    });
 
-      const{setDetailPage} = useContext(AppContext)
-    useEffect(()=> {
+      const{setDetailPage} = useContext(AppContext);
+
+      useEffect(()=> {
       const storedHotel = localStorage.getItem('selectedHotel')
       if (storedHotel) {
           setSelecteddHotel(JSON.parse(storedHotel))
@@ -22,16 +24,17 @@ const Detail = () => {
       setDetailPage;
     }, []);
 
-    const {name, photo} = selectedHotel;
+    const {name, photo, description, city, country} = selectedHotel;
       console.log(selectedHotel);
     return (
       <div className={styles.container}>
         <img src={photo} width={300} height={300} className={styles.detailImage}></img>
-          <h2>{name}</h2>
-          {/* <p>Pais: {description}</p>
-          <p>Ciudad: {city}</p> */}
+          <h2>el nombre es {name}</h2>
+          <h2 className={styles.text}>{description} <br/>
+          City:{city} <br />
+          Country :{country}</h2>
           <MainButton className={styles.buttonCardHotel}>Reservar</MainButton>
-          <MainButton> className={styles.buttonSecondary}Favoritos</MainButton>
+          <MainButton className={styles.buttonSecondary}>Favoritos</MainButton>
       </div>
     )
 }

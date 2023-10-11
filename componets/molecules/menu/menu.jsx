@@ -7,6 +7,7 @@ import styles from "./Menus.module.css";
 import Link from 'next/link';
 import { useContext } from 'react';
 import { AppContext } from '@/app/store/CurrentProvider';
+
 // import MenuIcon from '@mui/icons-material/Menu';
 
 export const Menu = () => {
@@ -46,6 +47,7 @@ export const Menu = () => {
               className={styles.labelMenu}>
               Reservas
             </Typography>
+
           </Link>
         </Toolbar>
       </AppBar>

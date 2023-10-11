@@ -38,6 +38,7 @@ export const CardsFilter = ({getDataHotels}) => {
     //     fetchHotels();
     // }, []);
 
+
     useEffect(()=>{
         const dateFromH = new Date(dateFrom);
         const dateToH = new Date(dateTo);
@@ -72,7 +73,7 @@ export const CardsFilter = ({getDataHotels}) => {
         selectedSizes,
         dateFrom,
         dateTo,
-        filterHotels
+        
     ])
 
     // const filterHotels = () => {
